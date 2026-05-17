@@ -1,0 +1,40 @@
+{
+  "color": {
+    "cream": { "$type": "color", "$value": "#F7F5F0" },
+    "ink": { "$type": "color", "$value": "#111111" },
+    "paper": { "$type": "color", "$value": "#FFFFFF" },
+    "charcoal": { "$type": "color", "$value": "#0F0F0E" },
+    "charcoalPanel": { "$type": "color", "$value": "#171716" },
+    "warmLine": { "$type": "color", "$value": "#D9D4C8" },
+    "darkLine": { "$type": "color", "$value": "#34312D" }
+  },
+  "space": {
+    "0": { "$type": "dimension", "$value": "0px" },
+    "1": { "$type": "dimension", "$value": "4px" },
+    "2": { "$type": "dimension", "$value": "8px" },
+    "3": { "$type": "dimension", "$value": "12px" },
+    "4": { "$type": "dimension", "$value": "16px" },
+    "5": { "$type": "dimension", "$value": "20px" },
+    "6": { "$type": "dimension", "$value": "24px" },
+    "8": { "$type": "dimension", "$value": "32px" }
+  },
+  "radius": {
+    "sm": { "$type": "dimension", "$value": "4px" },
+    "md": { "$type": "dimension", "$value": "8px" },
+    "lg": { "$type": "dimension", "$value": "14px" },
+    "xl": { "$type": "dimension", "$value": "22px" },
+    "full": { "$type": "dimension", "$value": "999px" }
+  },
+  "shadow": {
+    "canvas": { "$type": "shadow", "$value": "0 24px 90px rgba(0, 0, 0, 0.22)" },
+    "panel": { "$type": "shadow", "$value": "0 18px 60px rgba(0, 0, 0, 0.16)" }
+  },
+  "font": {
+    "ui": { "$type": "fontFamily", "$value": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" },
+    "mono": { "$type": "fontFamily", "$value": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" }
+  },
+  "size": {
+    "controlHeight": { "$type": "dimension", "$value": "36px" },
+    "inspectorWidth": { "$type": "dimension", "$value": "380px" }
+  }
+}

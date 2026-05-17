@@ -2,48 +2,44 @@
 
 ## Project
 
-This is the Studio419 Font & Palette Visualization App. It began as a single-file HTML prototype and should evolve into a tokenized, extensible design-system-first application.
+Font Pair & Palette Visualizer is a Studio419 / Future Craft tool for exploring font pairings and color palettes using a responsive hero section as a real-world design test canvas.
 
-## Core Principle
+## Prime directive
 
-Do not hard-code visual values directly into components unless they are temporary placeholders. Use design tokens, semantic variables, and structured data.
+Preserve visual and behavioral parity with the reference HTML unless the task explicitly asks for a change.
 
-## Architecture Goals
+## Do not redesign
 
-- Prefer React + TypeScript.
-- Prefer Vite for local development.
-- Use CSS custom properties generated from token files.
-- Keep design tokens machine-readable and human-readable.
-- Separate raw tokens, semantic tokens, component tokens, and preset data.
-- Keep font pairs, palettes, and presets as structured JSON data.
-- Avoid one-off inline styles unless unavoidable.
-- Preserve the current prototype behavior before refactoring aggressively.
+Do not replace the UI with generic SaaS, shadcn, Radix, Tailwind default, or dashboard styling.
+Do not change colors, spacing, control height, inspector width, header layout, canvas controls, section order, or labels unless specifically requested.
 
-## Design System Rules
+## Reference
 
-Use this token hierarchy:
+Use `/reference/v244.html` and `/reference/screenshots/*` as the source of truth.
 
-1. Primitive tokens: raw color, spacing, typography, radius, shadow, motion values.
-2. Semantic tokens: background, surface, text, border, accent, CTA, focus, muted, danger.
-3. Component tokens: hero background, hero eyebrow, hero headline, hero body, hero CTA, control panel surface, slider track.
-4. Preset tokens: named combinations of font pair, palette, layout, spacing, and theme mode.
+## UI constants
 
-## Required Checks
+- Inspector is right side and approximately 445px wide.
+- Header uses Studio419 logo on left, controls centered, UI mode on right.
+- Controls are compact 32px chrome.
+- Dark chrome colors must match the reference.
+- Saved setups are managed through a dropdown, not visible cards.
+- About panel is last in inspector.
+- Brand-Inspired Systems language must remain unofficial and public-safe.
 
-Before finishing a task:
+## Implementation rules
 
-- Run typecheck if available.
-- Run build if available.
-- Confirm no obvious console errors.
-- Summarize changed files.
-- Explain any architectural tradeoffs.
+- Prefer small, targeted patches.
+- Preserve IDs/data behavior during migration when possible.
+- Keep CSS close to reference until visual parity is approved.
+- Extract tokens only after the UI matches.
+- Do not add custom palette picker/admin/Figma export until parity milestone is approved.
 
-## Product Direction
+## Validation
 
-This app is not just a visual playground. It should become a Studio419 design-system artifact that can later feed:
+Before final answer:
 
-- Future Craft articles
-- Figma variables
-- reusable presets
-- possible hosted web app
-- possible admin interface for font and palette libraries
+- Run typecheck/lint if available.
+- Start app locally if possible.
+- Capture or inspect screenshots for desktop full UI, header, inspector, canvas, and presets panel.
+- Report changed files and known risks.

@@ -1,0 +1,27 @@
+{
+  "appShell": {
+    "gap": { "$type": "dimension", "$value": "{space.3}" }
+  },
+  "header": {
+    "height": { "$type": "dimension", "$value": "64px" },
+    "paddingX": { "$type": "dimension", "$value": "{space.4}" }
+  },
+  "inspector": {
+    "width": { "$type": "dimension", "$value": "{size.inspectorWidth}" },
+    "sectionPadding": { "$type": "dimension", "$value": "{space.4}" }
+  },
+  "control": {
+    "height": { "$type": "dimension", "$value": "{size.controlHeight}" },
+    "radius": { "$type": "dimension", "$value": "{radius.md}" },
+    "gap": { "$type": "dimension", "$value": "{space.2}" }
+  },
+  "canvas": {
+    "gridSize": { "$type": "dimension", "$value": "28px" },
+    "padding": { "$type": "dimension", "$value": "{space.8}" }
+  },
+  "hero": {
+    "radius": { "$type": "dimension", "$value": "24px" },
+    "minHeight": { "$type": "dimension", "$value": "560px" },
+    "shadow": { "$type": "shadow", "$value": "{shadow.canvas}" }
+  }
+}

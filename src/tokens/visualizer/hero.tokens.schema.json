@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Studio419 Hero Token Package",
+  "type": "object",
+  "required": ["modes", "typography", "layout"],
+  "properties": {
+    "modes": {
+      "type": "object",
+      "required": ["light", "dark", "brand"]
+    },
+    "typography": { "type": "object" },
+    "layout": { "type": "object" }
+  }
+}

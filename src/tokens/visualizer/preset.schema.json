@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Studio419 Visualizer Saved Setup",
+  "type": "object",
+  "required": ["id", "type", "version", "name", "state", "tokens"],
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "const": "studio419.hero-preset" },
+    "version": { "type": "string" },
+    "name": { "type": "string" },
+    "state": { "type": "object" },
+    "tokens": { "type": "object" }
+  }
+}

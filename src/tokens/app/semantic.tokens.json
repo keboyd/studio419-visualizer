@@ -1,0 +1,17 @@
+{
+  "app": {
+    "bg": { "$type": "color", "$value": "{color.charcoal}" },
+    "panel": { "$type": "color", "$value": "{color.charcoalPanel}" },
+    "panelSoft": { "$type": "color", "$value": "#1E1D1B" },
+    "text": { "$type": "color", "$value": "{color.cream}" },
+    "muted": { "$type": "color", "$value": "#AAA39A" },
+    "line": { "$type": "color", "$value": "{color.darkLine}" },
+    "accent": { "$type": "color", "$value": "{color.cream}" },
+    "onAccent": { "$type": "color", "$value": "{color.ink}" },
+    "focus": { "$type": "color", "$value": "#F7B32B" },
+    "danger": { "$type": "color", "$value": "#FF9B8F" },
+    "pass": { "$type": "color", "$value": "#7DDC9B" },
+    "warn": { "$type": "color", "$value": "#FFD36A" },
+    "fail": { "$type": "color", "$value": "#FF9B8F" }
+  }
+}
