@@ -1,8 +1,0 @@
-approval_policy = "on-request"
-sandbox_mode = "workspace-write"
-
-[profiles.default]
-reasoning_effort = "high"
-
-[project]
-trusted = true
