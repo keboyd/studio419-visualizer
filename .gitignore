@@ -6,6 +6,8 @@ dist/
 build/
 .next/
 *.tsbuildinfo
+test-results/
+playwright-report/
 
 # environment variables
 .env

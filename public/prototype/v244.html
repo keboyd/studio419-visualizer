@@ -10037,7 +10037,7 @@ function duplicatePreset(id){
   const base=favorites[i];
   const copyPreset=JSON.parse(JSON.stringify(base));
   copyPreset.id="hero-"+Date.now();
-  copyPreset.name=(presetLabel(base)||"Hero Preset")+" Copy";
+  copyPreset.name=(presetLabel(base)||"Saved Setup")+" Copy";
   copyPreset.createdAt=new Date().toISOString();
   favorites.splice(i+1,0,copyPreset);
   selectedFavorite=copyPreset.id;
