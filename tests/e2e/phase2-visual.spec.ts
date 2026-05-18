@@ -1,6 +1,7 @@
 import { expect, test, type FrameLocator, type Locator, type Page } from "@playwright/test";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { inspectorPanels, modalReferences, prototypeRegions } from "../../src/features/parity/prototypeManifest";
 
 type VisualComparison = {
   actualHeight: number;
@@ -115,25 +116,25 @@ test.describe("Phase 2 visual parity checks", () => {
   test("matches the desktop shell and header reference screenshots", async ({ page }) => {
     const frame = await loadPrototype(page);
 
-    await expectVisualMatch(page, page, "desktop-full.png");
-    await expectVisualMatch(page, frame.locator("header.topbar-v39"), "header.png");
+    await expectVisualMatch(page, page, prototypeRegions.desktop.screenshot);
+    await expectVisualMatch(page, frame.locator(prototypeRegions.header.selector), prototypeRegions.header.screenshot);
   });
 
   test("matches inspector panel reference screenshots", async ({ page }) => {
     const frame = await loadPrototype(page);
 
-    await expectVisualMatch(page, frame.locator('[data-major-group="color"]'), "brand-panel.png");
-    await expectVisualMatch(page, frame.locator('[data-major-group="type"]'), "type-panel.png");
-    await expectVisualMatch(page, frame.locator('[data-major-group="layout"]'), "layout-panel.png");
-    await expectVisualMatch(page, frame.locator('[data-major-group="save"]'), "presets-panel.png");
-    await expectVisualMatch(page, frame.locator('[data-major-group="about"]'), "about-panel.png");
+    for (const panel of inspectorPanels) {
+      await expectVisualMatch(page, frame.locator(panel.selector), panel.screenshot);
+    }
   });
 
   test("matches the existing custom palette modal reference screenshot", async ({ page }) => {
     const frame = await loadPrototype(page);
+    const customPalette = modalReferences.customPalette;
 
-    await frame.getByRole("button", { name: "Custom" }).click();
+    await frame.getByRole("button", { name: customPalette.triggerName }).click();
     await expect(frame.locator("#customPaletteModal")).toHaveAttribute("aria-hidden", "false");
-    await expectVisualMatch(page, frame.locator("#customPaletteModal .modal"), "Build a custom palette.png");
+    await expect(frame.getByRole("heading", { name: customPalette.heading })).toBeVisible();
+    await expectVisualMatch(page, frame.locator(customPalette.selector), customPalette.screenshot);
   });
 });
