@@ -1,0 +1,30 @@
+@import "../styles/tokens.css";
+
+html,
+body {
+  min-height: var(--app-viewport-min-height);
+  margin: var(--app-body-margin);
+  background: var(--app-bg);
+}
+
+body {
+  color: var(--app-text);
+  font-family: var(--app-font-sans);
+  overflow: hidden;
+}
+
+.app-shell {
+  width: var(--app-viewport-width);
+  height: var(--app-viewport-height);
+  min-height: var(--app-viewport-min-height);
+  margin: var(--app-body-margin);
+  background: var(--app-bg);
+}
+
+.prototype-frame {
+  display: block;
+  width: var(--app-viewport-width);
+  height: var(--app-viewport-height);
+  border: var(--app-frame-border);
+  background: var(--app-bg);
+}
